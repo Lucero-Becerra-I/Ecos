@@ -1,0 +1,13 @@
+/* CONTENEDOR DEL CANVAS */
+
+.game-canvas {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* CANVAS DE PHASER */
+
+.game-canvas canvas {
+  display: block;
+}

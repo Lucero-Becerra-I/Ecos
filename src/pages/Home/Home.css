@@ -1,0 +1,409 @@
+/* PANTALLA DE INICIO */
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #27313b 0%,
+      #11161b 45%,
+      #080a0d 100%
+    );
+
+  color: #e8e4dc;
+
+  overflow: hidden;
+}
+
+/* CAPA OSCURA */
+
+.home::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.55)
+    );
+
+  pointer-events: none;
+}
+
+/* CONTENIDO */
+
+.home-content {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 1;
+}
+
+/* PEQUEÑO TITULO */
+
+.home-eyebrow {
+  margin: 0 0 18px;
+
+  font-size: 11px;
+
+  letter-spacing: 5px;
+
+  color: #a9a39a;
+}
+
+/* TITULO */
+
+.home h1 {
+  margin: 0;
+
+  font-size:
+    clamp(80px, 15vw, 180px);
+
+  font-weight: 300;
+
+  letter-spacing: 25px;
+
+  color: #f0ece4;
+}
+
+/* DESCRIPCION */
+
+.home-description {
+  max-width: 420px;
+
+  margin: 20px 0 40px;
+
+  color: #9c9a96;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* MENU */
+
+.home-menu {
+  width: 260px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/* BOTONES */
+
+.home-button {
+  width: 100%;
+
+  padding: 15px 25px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #eeeae3;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* HOVER */
+
+.home-button:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  border-color:
+    rgba(255, 255, 255, 0.4);
+
+  transform:
+    translateY(-1px);
+}
+
+/* PANEL */
+
+.home-panel {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(420px, 90%);
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  background:
+    rgba(10, 12, 15, 0.95);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* TITULO DEL PANEL */
+
+.home-panel-eyebrow {
+  margin-bottom: 15px;
+
+  color: #777b7f;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+}
+
+.home-panel h2 {
+  margin: 0 0 30px;
+
+  color: #e8e4dc;
+
+  font-size: 32px;
+
+  font-weight: 300;
+
+  letter-spacing: 7px;
+}
+
+/* LISTA DE PARTIDAS */
+
+.save-list {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+/* PARTIDA */
+
+.save-slot {
+  width: 100%;
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  color: #e8e4dc;
+
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* DATOS DE PARTIDA */
+
+.save-slot span {
+  color: #666b70;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+/* HOVER */
+
+.save-slot:hover {
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  border-color:
+    rgba(255, 255, 255, 0.3);
+}
+
+/* CONFIRMACION */
+
+.home-confirm-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 300;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    rgba(5, 7, 9, 0.8);
+
+  backdrop-filter:
+    blur(6px);
+}
+
+/* CAJA DE CONFIRMACION */
+
+.home-confirm {
+  width: min(420px, 90%);
+
+  padding: 40px;
+
+  background:
+    rgba(12, 15, 18, 0.98);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.7);
+}
+
+/* TITULO PEQUEÑO */
+
+.home-confirm > span {
+  color: #777b7f;
+
+  font-size: 10px;
+
+  letter-spacing: 5px;
+}
+
+/* TITULO */
+
+.home-confirm h2 {
+  margin: 20px 0;
+
+  color: #e8e4dc;
+
+  font-size: 25px;
+
+  font-weight: 300;
+
+  letter-spacing: 4px;
+}
+
+/* TEXTO */
+
+.home-confirm p {
+  margin: 0 0 30px;
+
+  color: #777b7f;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* OPCIONES */
+
+.home-confirm-options {
+  display: flex;
+
+  gap: 10px;
+}
+
+/* BOTONES */
+
+.home-confirm-options button {
+  flex: 1;
+
+  padding: 14px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.15);
+
+  background:
+    rgba(255, 255, 255, 0.04);
+
+  color: #d8d4cd;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* HOVER */
+
+.home-confirm-options button:hover {
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  border-color:
+    rgba(255, 255, 255, 0.35);
+}
+
+/* VERSION */
+
+.home-version {
+  position: absolute;
+
+  bottom: 20px;
+
+  right: 25px;
+
+  font-size: 10px;
+
+  color: #555b60;
+
+  letter-spacing: 2px;
+}
